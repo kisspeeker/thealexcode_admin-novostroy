@@ -6,7 +6,7 @@ services:
     image: thealexcode/admin
     restart: always
     ports:
-      - '1337:1337'
+      - '1338:1338'
     volumes:
       - db:/opt/app/.tmp/
     labels:
