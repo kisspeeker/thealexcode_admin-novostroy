@@ -9,22 +9,28 @@ const sanitizeAttributes = (data = {}, customFieldsToHide) => {
   }, {});
 }
 
-const sanitizeArray = (data = [], customFieldsToHide) => {
+const sanitizeArray = (data = [], isShowId = true, customFieldsToHide) => {
   const arr = Array.isArray(data) ? data : [];
 
   return arr.map((item) => {
-    return {
-      id: item.id,
+    const res = {
       ...sanitizeAttributes(item.attributes, customFieldsToHide)
     }
+    if (isShowId) {
+      res.id = item.id;
+    }
+    return res
   })
 }
 
-const sanitizeObject = (data = {}, customFieldsToHide) => {
-  return {
-    id: data.id,
+const sanitizeObject = (data = {}, isShowId = true, customFieldsToHide) => {
+  const res = {
     ...sanitizeAttributes(data.attributes, customFieldsToHide)
   }
+  if (isShowId) {
+    res.id = data.id;
+  }
+  return res
 }
 
 module.exports = {
