@@ -3,7 +3,7 @@ version: '3'
 services:
   admin:
     build: .
-    image: thealexcode/admin
+    image: thealexcode/admin_novostroy
     restart: always
     ports:
       - '1338:1338'
