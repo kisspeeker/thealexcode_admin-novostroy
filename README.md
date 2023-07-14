@@ -65,7 +65,7 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 - docker exec <container_ref> backup
 
 ### Download backup from server folder (/Users/a.shiryakov/thealexcode_local_backups) and unarchive it
-- scp root@82.148.18.166:/Users/a.shiryakov/thealexcode_local_backups/backup-db-2022-09-22T04-39-06.tar.gz ~/Downloads
+- scp root@82.148.18.166:/Users/a.shiriakov/thealexcode_local_backups/backup-db-2022-09-22T04-39-06.tar.gz ~/Downloads
 - cd ~/Downloads
 - tar -C ./ -xvf backup.tar.gz
 
